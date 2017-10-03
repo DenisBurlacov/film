@@ -1,6 +1,7 @@
 @charset "utf-8";
 @import "settings";
-@import "veriables";
+@import "veriables", "../loaders/loaders";
+@import url(https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css);
 
 html, body{
   margin: 0;
@@ -32,6 +33,31 @@ header{
 
   .btns{
 
+
+    @media (max-width: 40em){
+      [for="btnCheker"]{
+        i{
+          font-size: 30px;
+          color: white;
+
+        }
+      }
+      #btnCheker:checked+*{
+        display: block;
+      }
+
+      .wr{
+        display: none;
+        position: absolute;
+        background: rgba(black, 0.5);
+        padding: 15px;
+
+        a{
+          margin-bottom: 10px;
+        }
+      }
+  }
+
     a{
       color: white;
       font-size: 18px;
@@ -50,7 +76,7 @@ header{
       }
       &.btn{
         font-family: 'HelveticaNeueCyr-Roman';
-        padding: 5px 23px;
+        padding: 5px 17px;
         border-radius: 4px;
 
 
@@ -78,6 +104,12 @@ header{
       display: flex;
       align-items: center;
       background: no-repeat center / cover;
+      padding: 20px 0 50px 0;
+      box-sizing: border-box;
+
+      @media (max-width: 40em){
+        padding-top: 100px;
+      }
 
       .for-title{
         font-family: 'HelveticaNeueCyr-Black';
@@ -128,6 +160,16 @@ header{
       .btns{
         position: relative;
 
+        @media (max-width: 40em){
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+
+          a{
+            margin-bottom: 10px;
+          }
+        }
+
         a{
           color: white;
           display: inline-block;
@@ -160,12 +202,34 @@ header{
       }
     }
   }
+  .for-dots{
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+
+    &>ul{
+      display: inline-flex;
+
+      li{
+        font-size: 0;
+        line-height: 0;
+        width: 15px;
+        height: 6px;
+        background: #a1918d;
+        border-radius: 3px;
+        margin: 0 5px;
+
+        &.slick-active{
+          background: $blue;
+        }
+      }
+    }
+  }
 }
 
 #trending{
   position: relative;
-
-
   .cat-grid{
     position: relative;
 
@@ -212,11 +276,370 @@ header{
            font-size: 35px;
          }
 
-
-
-
       }
     }
 
+  }
+  ul.film-list{
+    list-style: none;
+    position: relative;
+    font-size: 14px;
+
+    &>li{
+      position: relative;
+      margin-bottom: 20rem;
+
+      &:hover{
+        &>.wr>.photo>.info{
+          display: flex;
+        }
+      }
+
+      &>.wr{
+        position: relative;
+
+
+        &>.photo{
+          position: relative;
+          padding-top: percentage(3 / 4);
+          background: no-repeat top  center  / cover;
+          border-radius: 5px 5px 0 0;
+          overflow: hidden;
+
+
+          &>.info{
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(black, 0.3);
+
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+
+            &>.btn1{
+              position: relative;
+              display: inline-block;
+
+              &:before{
+                content: '';
+                display: block;
+                position: absolute;
+                width: 25px;
+                height: 25px;
+                background: white;
+                left: calc( 50% - 10px);
+                top: calc( 44% - 10px);
+              }
+
+              i{
+                position: relative;
+                font-size: 60px;
+              }
+            }
+
+            &>.note{
+              font-family: 'HelveticaNeueCyr-Roman';
+              font-size: 18px;
+              font-weight: 400;
+
+            }
+
+            &>.btn2{
+              color: white;
+              display: inline-block;
+              padding: 3px 10px;
+              border: 1px solid white;
+              border-radius: 3px;
+              font-family: 'HelveticaNeueCyr-Roman';
+              font-size: 18px;
+              font-weight: 400;
+              margin-top: 20px;
+
+
+              &:hover, &.active{
+                background: $blue;
+                border-color: $blue;
+              }
+
+            }
+          }
+        }
+        &>.short-info{
+          position: relative;
+          background: white;
+          padding: 20px;
+
+            &>.row1 {
+              position: relative;
+              display: flex;
+              justify-content: space-between;
+              align-items: flex-start;
+
+              &>.title{
+                display: block;
+                text-transform: uppercase;
+                color: #0a0a0a;
+                font-size: 18px;
+                font-family: 'HelveticaNeueCyr-Roman';
+                font-weight: 700;
+
+                &:hover{
+                  color: $blue;
+                }
+              }
+              &>.rate{
+                flex-shrink: 1;
+                padding: 0 5px;
+                font-size: 12px;
+                color: $blue;
+                border: 1px solid $blue;
+                border-radius: 3px;
+              }
+            }
+            &>.row2{
+              position: relative;
+              margin-top: 10px ;
+
+              span{
+                display: inline-block;
+                font-size: 12px;
+                font-family: 'HelveticaNeueCyr-Roman';
+                margin-right: 5px;
+                color: $blue;
+              }
+            }
+        }
+        &>.full-info{
+          display: none;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          padding: 20px;
+          top: 0;
+          left: 0;
+          background: no-repeat top center / cover;
+          border-radius: 3px;
+
+          &:before{
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(black, 0.6);
+            border-radius: 3px;
+          }
+          &>.row-1{
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            &>.col1{
+              flex-shrink: 1;
+              i{
+                vertical-align: middle;
+                color: white;
+
+                &:hover{
+                  color: $blue;
+                }
+              }
+            }
+            &>.col2{
+              a{
+                text-align: right;
+                font-family: 'HelveticaNeueCyr-Roman';
+                font-size: 14px;
+                color: white;
+                display: inline-block;
+                margin-left: 5px;
+
+                &:hover{
+                  color: $blue;
+                }
+                &>i{
+                  vertical-align: middle;
+                  font-size: 18px;
+                }
+              }
+            }
+
+          }
+          &>.row-2{
+            margin-top: 20px;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            .title{
+              display: block;
+              text-transform: uppercase;
+              color: white;
+              font-size: 18px;
+              font-family: 'HelveticaNeueCyr-Roman';
+              font-weight: 700;
+
+              &:hover{
+                color: $blue;
+              }
+            }
+            .ganre{
+              font-size: 12px;
+              color: $blue;
+              font-family: "HelveticaNeueCyr-Roman";
+
+            }
+            &>.rate{
+              flex-shrink: 1;
+              padding: 0 5px;
+              font-size: 12px;
+              color: $blue;
+              border: 1px solid $blue;
+              border-radius: 3px;
+            }
+          }
+          &>.row-3{
+            font-family: "HelveticaNeueCyr-Roman";
+            font-size: 14px;
+            color: white;
+            position: relative;
+            line-height: 1.5;
+            margin-top: 15px;
+            max-height: 80px;
+            overflow: hidden;
+          }
+          &>.row-4{
+            position: relative;
+            margin-top: 20px;
+            a{
+              display: inline-block;
+              padding: 3px 10px;
+              font-family: 'HelveticaNeueCyr-Roman';
+              font-size: 14px;
+              color: white;
+              border: 1px solid white;
+              border-radius: 3px;
+
+              &:hover, &.active{
+                background: $blue;
+                border-color: $blue;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .subscribe{
+    position: relative;
+    font-size: 14px;
+
+
+    .content{
+      background: no-repeat center / cover;
+      border-radius: 3px;
+      padding: 63px 0;
+
+      .descr {
+        color: white;
+        font-family: 'HelveticaNeueCyr-Roman';
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 36px;
+      }
+
+        .btn{
+          color: white;
+          display: inline-block;
+          padding: 5px 15px;
+          font-size: 14px;
+          border: 1px solid white;
+          border-radius: 3px;
+
+          &:hover, &.active{
+            background: $blue;
+            border-color: $blue;
+
+        }
+      }
+
+    }
+  }
+}
+
+
+.more-items{
+  position: relative;
+
+
+  &>.loader{
+    display: inline-block;
+    @include loader10(10px, $blue);
+  }
+  &>.text{
+    color: #bec0c0;
+    font-family: 'HelveticaNeueCyr-Roman';
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+}
+
+footer{
+  position: relative;
+  background: white;
+  padding: 25px 0;
+  font-size: 14px;
+
+  .more-links{
+    a{
+      display: inline-block;
+      font-size: 14px;
+      font-family: 'HelveticaNeueCyr-Roman';
+      color: #bcbebe;
+      margin-right: 10px;
+
+      &:hover{
+        color: $blue;
+      }
+    }
+  }
+  .center{
+    .logo{
+      font-family: "HelveticaNeueCyr-Black";
+      color: $blue;
+      font-size: 28px;
+    }
+    .copy{
+      color: #bcbebe;
+      font-family: 'HelveticaNeueCyr-Roman';
+      font-size: 14px;
+    }
+  }
+  .socials{
+    a{
+      display: inline-block;
+      margin-left: 10px;
+      color: #bcbebe;
+      font-size: 32px;
+
+      &:hover{
+        color: $blue;
+      }
+
+      i{
+        vertical-align: middle;
+      }
+    }
   }
 }

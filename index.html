@@ -6,7 +6,10 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="./style/foundation/foundation.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
 	<link rel="stylesheet" type="text/css" href="./style/app/app.css">
+
+
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<title>Document</title>
 </head>
@@ -17,9 +20,13 @@
 			<a href="#" class="logo">MOVIE <span class="light">RICE</span></a>
 		</div>
 		<div class="columns text-right btns">
-			<a href="" class="search"><i class="material-icons">&#xE8B6;</i></a>
-			<a href="" class="btn">Sign In</a>
-			<a href="" class="btn">Sign Up</a>
+			<label for="btnCheker" class="show-for-small-only"><i class="material-icons">menu</i></label>
+			<input type="checkbox"  id="btnCheker" hidden>
+			<div class="wr">
+				<a href="" class="search"><i class="material-icons">&#xE8B6;</i></a>
+				<a href="" class="btn">Sign In</a>
+				<a href="" class="btn">Sign Up</a>
+			</div>
 		</div>
 	</div>
 </header>
@@ -28,7 +35,7 @@
 	<ul class="slider">
 		<li style="background-image: url(./img/slider-bg.png);">
 			<div class="row">
-				<div class="content columns medium-5">
+				<div class="content columns medium-6">
 					<div class="for-title">The Jungle Book</div>
 					<div class="categ">
 						<span>Adventure</span>
@@ -58,7 +65,74 @@
 				</div>
 			</div>
 		</li>
+		<li style="background-image: url(./img/b2.jpg);">
+			<div class="row">
+				<div class="content columns medium-6">
+					<div class="for-title">The Jungle Book</div>
+					<div class="categ">
+						<span>Adventure</span>
+						<span>Drama</span>
+						<span>Family</span>
+						<span>Fantasy</span>
+						<span>1h 46m</span>
+					</div>
+					<div class="rate">
+						<i class="material-icons">star_rate</i>
+						<i class="material-icons">star_rate</i>
+						<i class="material-icons">star_rate</i>
+						<i class="material-icons">star_rate</i>
+						<i class="material-icons">star_rate</i>
+						<span>4.8</span>
+					</div>
+					<div class="descr"> After a threat from Shere Khan forces him to flee the jungle,
+						Mowgli embarks on a journey of self discovery with the help of panther,
+						Bagheera, and free spirited bear, Baloo.
+					</div>
+					<div class="btns">
+						<a href="" class="btn active" >Watch Now</a>
+						<a href="" class="btn">View Info</a>
+						<a href="">+ Favorites</a>
+						<a href="" class="more"><i class="material-icons">more_vert</i></a>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li style="background-image: url(./img/b3.jpg);">
+			<div class="row">
+				<div class="content columns medium-6">
+					<div class="for-title">The Jungle Book</div>
+					<div class="categ">
+						<span>Adventure</span>
+						<span>Drama</span>
+						<span>Family</span>
+						<span>Fantasy</span>
+						<span>1h 46m</span>
+					</div>
+					<div class="rate">
+						<i class="material-icons">star_rate</i>
+						<i class="material-icons">star_rate</i>
+						<i class="material-icons">star_rate</i>
+						<i class="material-icons">star_rate</i>
+						<i class="material-icons">star_rate</i>
+						<span>4.8</span>
+					</div>
+					<div class="descr"> After a threat from Shere Khan forces him to flee the jungle,
+						Mowgli embarks on a journey of self discovery with the help of panther,
+						Bagheera, and free spirited bear, Baloo.
+					</div>
+					<div class="btns">
+						<a href="" class="btn active" >Watch Now</a>
+						<a href="" class="btn">View Info</a>
+						<a href="">+ Favorites</a>
+						<a href="" class="more"><i class="material-icons">more_vert</i></a>
+					</div>
+				</div>
+			</div>
+		</li>
 	</ul>
+	<div class="for-dots">
+
+	</div>
 </section>
 
 <section id="trending" class="mt35">
@@ -76,9 +150,857 @@
 			<a href="#"><i class="material-icons">view_stream</i></a>
 		</div>
 	</div>
+	<ul class="row film-list mt15 mb15">
+		<li class="columns small-12 medium-6 large-3">
+			<div class="wr">
+				<div class="photo" style="background-image: url(./img/film-1.jpg); ">
+					<div class="info">
+						<a href="#" class="btn1"><i class="material-icons">play_circle_filled</i></a>
+						<div class="note">Watch Now</div>
+						<a href="#" class="btn2" data-js="open-full-info">View Info</a>
+					</div>
+				</div>
+				<div class="short-info">
+					<div class="row1">
+						<a href="#" class="title">Lorem ipsum dolor.</a>
+						<div class="rate">4.8</div>
+					</div>
+					<div class="row2">
+						<span>Lorem.</span>
+						<span>Nisi.</span>
+						<span>Minus?</span>
+					</div>
+				</div>
+				<div class="full-info" style="background-image: url(./img/film-1.jpg)">
+					<div class="row-1">
+						<div class="col1" data-js="close-full-info">
+							<i class="material-icons">&#xE145;</i>
+						</div>
+						<div class="col2">
+							<a href="#">+ Favorites</a>
+							<a href="#"><i class="material-icons">&#xE5D4;</i></a>
+						</div>
+					</div>
+					<div class="row-2">
+						<div class="col1">
+							<a href="#" class="title">Lorem ipsum dolor.</a>
+							<div class="ganre">
+								Lorem, ipsum, dolor, sit.
+							</div>
+						</div>
+						<div class="rate">4.8</div>
+					</div>
+					<div class="row-3">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+						Ad beatae commodi corporis, dolor illo minus quia quidem
+						similique suscipit ullam!
+					</div>
+					<div class="row-4">
+						<a href="#">Watch Now</a>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="columns small-12 medium-6 large-3">
+			<div class="wr">
+				<div class="photo" style="background-image: url(./img/2.jpg); ">
+					<div class="info">
+						<a href="#" class="btn1"><i class="material-icons">play_circle_filled</i></a>
+						<div class="note">Watch Now</div>
+						<a href="#" class="btn2" data-js="open-full-info">View Info</a>
+					</div>
+				</div>
+				<div class="short-info">
+					<div class="row1">
+						<a href="#" class="title">Lorem ipsum dolor.</a>
+						<div class="rate">4.8</div>
+					</div>
+					<div class="row2">
+						<span>Lorem.</span>
+						<span>Nisi.</span>
+						<span>Minus?</span>
+					</div>
+				</div>
+				<div class="full-info" style="background-image: url(./img/2.jpg)">
+					<div class="row-1">
+						<div class="col1" data-js="close-full-info">
+							<i class="material-icons">&#xE145;</i>
+						</div>
+						<div class="col2">
+							<a href="#">+ Favorites</a>
+							<a href="#"><i class="material-icons">&#xE5D4;</i></a>
+						</div>
+					</div>
+					<div class="row-2">
+						<div class="col1">
+							<a href="#" class="title">Lorem ipsum dolor.</a>
+							<div class="ganre">
+								Lorem, ipsum, dolor, sit.
+							</div>
+						</div>
+						<div class="rate">4.8</div>
+					</div>
+					<div class="row-3">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+						Ad beatae commodi corporis, dolor illo minus quia quidem
+						similique suscipit ullam!
+					</div>
+					<div class="row-4">
+						<a href="#">Watch Now</a>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="columns small-12 medium-6 large-3">
+			<div class="wr">
+				<div class="photo" style="background-image: url(./img/3.jpg); ">
+					<div class="info">
+						<a href="#" class="btn1"><i class="material-icons">play_circle_filled</i></a>
+						<div class="note">Watch Now</div>
+						<a href="#" class="btn2" data-js="open-full-info">View Info</a>
+					</div>
+				</div>
+				<div class="short-info">
+					<div class="row1">
+						<a href="#" class="title">Lorem ipsum dolor.</a>
+						<div class="rate">4.8</div>
+					</div>
+					<div class="row2">
+						<span>Lorem.</span>
+						<span>Nisi.</span>
+						<span>Minus?</span>
+					</div>
+				</div>
+				<div class="full-info" style="background-image: url(./img/3.jpg)">
+					<div class="row-1">
+						<div class="col1" data-js="close-full-info">
+							<i class="material-icons">&#xE145;</i>
+						</div>
+						<div class="col2">
+							<a href="#">+ Favorites</a>
+							<a href="#"><i class="material-icons">&#xE5D4;</i></a>
+						</div>
+					</div>
+					<div class="row-2">
+						<div class="col1">
+							<a href="#" class="title">Lorem ipsum dolor.</a>
+							<div class="ganre">
+								Lorem, ipsum, dolor, sit.
+							</div>
+						</div>
+						<div class="rate">4.8</div>
+					</div>
+					<div class="row-3">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+						Ad beatae commodi corporis, dolor illo minus quia quidem
+						similique suscipit ullam!
+					</div>
+					<div class="row-4">
+						<a href="#">Watch Now</a>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="columns small-12 medium-6 large-3">
+			<div class="wr">
+				<div class="photo" style="background-image: url(./img/4.jpg); ">
+					<div class="info">
+						<a href="#" class="btn1"><i class="material-icons">play_circle_filled</i></a>
+						<div class="note">Watch Now</div>
+						<a href="#" class="btn2" data-js="open-full-info">View Info</a>
+					</div>
+				</div>
+				<div class="short-info">
+					<div class="row1">
+						<a href="#" class="title">Lorem ipsum dolor.</a>
+						<div class="rate">4.8</div>
+					</div>
+					<div class="row2">
+						<span>Lorem.</span>
+						<span>Nisi.</span>
+						<span>Minus?</span>
+					</div>
+				</div>
+				<div class="full-info" style="background-image: url(./img/4.jpg)">
+					<div class="row-1">
+						<div class="col1" data-js="close-full-info">
+							<i class="material-icons">&#xE145;</i>
+						</div>
+						<div class="col2">
+							<a href="#">+ Favorites</a>
+							<a href="#"><i class="material-icons">&#xE5D4;</i></a>
+						</div>
+					</div>
+					<div class="row-2">
+						<div class="col1">
+							<a href="#" class="title">Lorem ipsum dolor.</a>
+							<div class="ganre">
+								Lorem, ipsum, dolor, sit.
+							</div>
+						</div>
+						<div class="rate">4.8</div>
+					</div>
+					<div class="row-3">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+						Ad beatae commodi corporis, dolor illo minus quia quidem
+						similique suscipit ullam!
+					</div>
+					<div class="row-4">
+						<a href="#">Watch Now</a>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="columns small-12 medium-6 large-3">
+			<div class="wr">
+				<div class="photo" style="background-image: url(./img/5.jpg); ">
+					<div class="info">
+						<a href="#" class="btn1"><i class="material-icons">play_circle_filled</i></a>
+						<div class="note">Watch Now</div>
+						<a href="#" class="btn2" data-js="open-full-info">View Info</a>
+					</div>
+				</div>
+				<div class="short-info">
+					<div class="row1">
+						<a href="#" class="title">Lorem ipsum dolor.</a>
+						<div class="rate">4.8</div>
+					</div>
+					<div class="row2">
+						<span>Lorem.</span>
+						<span>Nisi.</span>
+						<span>Minus?</span>
+					</div>
+				</div>
+				<div class="full-info" style="background-image: url(./img/5.jpg)">
+					<div class="row-1">
+						<div class="col1" data-js="close-full-info">
+							<i class="material-icons">&#xE145;</i>
+						</div>
+						<div class="col2">
+							<a href="#">+ Favorites</a>
+							<a href="#"><i class="material-icons">&#xE5D4;</i></a>
+						</div>
+					</div>
+					<div class="row-2">
+						<div class="col1">
+							<a href="#" class="title">Lorem ipsum dolor.</a>
+							<div class="ganre">
+								Lorem, ipsum, dolor, sit.
+							</div>
+						</div>
+						<div class="rate">4.8</div>
+					</div>
+					<div class="row-3">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+						Ad beatae commodi corporis, dolor illo minus quia quidem
+						similique suscipit ullam!
+					</div>
+					<div class="row-4">
+						<a href="#">Watch Now</a>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="columns small-12 medium-6 large-3">
+			<div class="wr">
+				<div class="photo" style="background-image: url(./img/6.jpg); ">
+					<div class="info">
+						<a href="#" class="btn1"><i class="material-icons">play_circle_filled</i></a>
+						<div class="note">Watch Now</div>
+						<a href="#" class="btn2" data-js="open-full-info">View Info</a>
+					</div>
+				</div>
+				<div class="short-info">
+					<div class="row1">
+						<a href="#" class="title">Lorem ipsum dolor.</a>
+						<div class="rate">4.8</div>
+					</div>
+					<div class="row2">
+						<span>Lorem.</span>
+						<span>Nisi.</span>
+						<span>Minus?</span>
+					</div>
+				</div>
+				<div class="full-info" style="background-image: url(./img/6.jpg)">
+					<div class="row-1">
+						<div class="col1" data-js="close-full-info">
+							<i class="material-icons">&#xE145;</i>
+						</div>
+						<div class="col2">
+							<a href="#">+ Favorites</a>
+							<a href="#"><i class="material-icons">&#xE5D4;</i></a>
+						</div>
+					</div>
+					<div class="row-2">
+						<div class="col1">
+							<a href="#" class="title">Lorem ipsum dolor.</a>
+							<div class="ganre">
+								Lorem, ipsum, dolor, sit.
+							</div>
+						</div>
+						<div class="rate">4.8</div>
+					</div>
+					<div class="row-3">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+						Ad beatae commodi corporis, dolor illo minus quia quidem
+						similique suscipit ullam!
+					</div>
+					<div class="row-4">
+						<a href="#">Watch Now</a>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="columns small-12 medium-6 large-3">
+			<div class="wr">
+				<div class="photo" style="background-image: url(./img/7.jpg); ">
+					<div class="info">
+						<a href="#" class="btn1"><i class="material-icons">play_circle_filled</i></a>
+						<div class="note">Watch Now</div>
+						<a href="#" class="btn2" data-js="open-full-info">View Info</a>
+					</div>
+				</div>
+				<div class="short-info">
+					<div class="row1">
+						<a href="#" class="title">Lorem ipsum dolor.</a>
+						<div class="rate">4.8</div>
+					</div>
+					<div class="row2">
+						<span>Lorem.</span>
+						<span>Nisi.</span>
+						<span>Minus?</span>
+					</div>
+				</div>
+				<div class="full-info" style="background-image: url(./img/7.jpg)">
+					<div class="row-1">
+						<div class="col1" data-js="close-full-info">
+							<i class="material-icons">&#xE145;</i>
+						</div>
+						<div class="col2">
+							<a href="#">+ Favorites</a>
+							<a href="#"><i class="material-icons">&#xE5D4;</i></a>
+						</div>
+					</div>
+					<div class="row-2">
+						<div class="col1">
+							<a href="#" class="title">Lorem ipsum dolor.</a>
+							<div class="ganre">
+								Lorem, ipsum, dolor, sit.
+							</div>
+						</div>
+						<div class="rate">4.8</div>
+					</div>
+					<div class="row-3">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+						Ad beatae commodi corporis, dolor illo minus quia quidem
+						similique suscipit ullam!
+					</div>
+					<div class="row-4">
+						<a href="#">Watch Now</a>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="columns small-12 medium-6 large-3">
+			<div class="wr">
+				<div class="photo" style="background-image: url(./img/8.jpg); ">
+					<div class="info">
+						<a href="#" class="btn1"><i class="material-icons">play_circle_filled</i></a>
+						<div class="note">Watch Now</div>
+						<a href="#" class="btn2" data-js="open-full-info">View Info</a>
+					</div>
+				</div>
+				<div class="short-info">
+					<div class="row1">
+						<a href="#" class="title">Lorem ipsum dolor.</a>
+						<div class="rate">4.8</div>
+					</div>
+					<div class="row2">
+						<span>Lorem.</span>
+						<span>Nisi.</span>
+						<span>Minus?</span>
+					</div>
+				</div>
+				<div class="full-info" style="background-image: url(./img/8.jpg)">
+					<div class="row-1">
+						<div class="col1" data-js="close-full-info">
+							<i class="material-icons">&#xE145;</i>
+						</div>
+						<div class="col2">
+							<a href="#">+ Favorites</a>
+							<a href="#"><i class="material-icons">&#xE5D4;</i></a>
+						</div>
+					</div>
+					<div class="row-2">
+						<div class="col1">
+							<a href="#" class="title">Lorem ipsum dolor.</a>
+							<div class="ganre">
+								Lorem, ipsum, dolor, sit.
+							</div>
+						</div>
+						<div class="rate">4.8</div>
+					</div>
+					<div class="row-3">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+						Ad beatae commodi corporis, dolor illo minus quia quidem
+						similique suscipit ullam!
+					</div>
+					<div class="row-4">
+						<a href="#">Watch Now</a>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="columns small-12 medium-6 large-3">
+			<div class="wr">
+				<div class="photo" style="background-image: url(./img/film-9.jpg); ">
+					<div class="info">
+						<a href="#" class="btn1"><i class="material-icons">play_circle_filled</i></a>
+						<div class="note">Watch Now</div>
+						<a href="#" class="btn2" data-js="open-full-info">View Info</a>
+					</div>
+				</div>
+				<div class="short-info">
+					<div class="row1">
+						<a href="#" class="title">Lorem ipsum dolor.</a>
+						<div class="rate">4.8</div>
+					</div>
+					<div class="row2">
+						<span>Lorem.</span>
+						<span>Nisi.</span>
+						<span>Minus?</span>
+					</div>
+				</div>
+				<div class="full-info" style="background-image: url(./img/film-9.jpg)">
+					<div class="row-1">
+						<div class="col1" data-js="close-full-info">
+							<i class="material-icons">&#xE145;</i>
+						</div>
+						<div class="col2">
+							<a href="#">+ Favorites</a>
+							<a href="#"><i class="material-icons">&#xE5D4;</i></a>
+						</div>
+					</div>
+					<div class="row-2">
+						<div class="col1">
+							<a href="#" class="title">Lorem ipsum dolor.</a>
+							<div class="ganre">
+								Lorem, ipsum, dolor, sit.
+							</div>
+						</div>
+						<div class="rate">4.8</div>
+					</div>
+					<div class="row-3">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+						Ad beatae commodi corporis, dolor illo minus quia quidem
+						similique suscipit ullam!
+					</div>
+					<div class="row-4">
+						<a href="#">Watch Now</a>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="columns small-12 medium-6 large-3">
+			<div class="wr">
+				<div class="photo" style="background-image: url(./img/film-10.jpg); ">
+					<div class="info">
+						<a href="#" class="btn1"><i class="material-icons">play_circle_filled</i></a>
+						<div class="note">Watch Now</div>
+						<a href="#" class="btn2" data-js="open-full-info">View Info</a>
+					</div>
+				</div>
+				<div class="short-info">
+					<div class="row1">
+						<a href="#" class="title">Lorem ipsum dolor.</a>
+						<div class="rate">4.8</div>
+					</div>
+					<div class="row2">
+						<span>Lorem.</span>
+						<span>Nisi.</span>
+						<span>Minus?</span>
+					</div>
+				</div>
+				<div class="full-info" style="background-image: url(./img/film-10.jpg)">
+					<div class="row-1">
+						<div class="col1" data-js="close-full-info">
+							<i class="material-icons">&#xE145;</i>
+						</div>
+						<div class="col2">
+							<a href="#">+ Favorites</a>
+							<a href="#"><i class="material-icons">&#xE5D4;</i></a>
+						</div>
+					</div>
+					<div class="row-2">
+						<div class="col1">
+							<a href="#" class="title">Lorem ipsum dolor.</a>
+							<div class="ganre">
+								Lorem, ipsum, dolor, sit.
+							</div>
+						</div>
+						<div class="rate">4.8</div>
+					</div>
+					<div class="row-3">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+						Ad beatae commodi corporis, dolor illo minus quia quidem
+						similique suscipit ullam!
+					</div>
+					<div class="row-4">
+						<a href="#">Watch Now</a>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="columns small-12 medium-6 large-3">
+			<div class="wr">
+				<div class="photo" style="background-image: url(./img/film-11.jpg); ">
+					<div class="info">
+						<a href="#" class="btn1"><i class="material-icons">play_circle_filled</i></a>
+						<div class="note">Watch Now</div>
+						<a href="#" class="btn2" data-js="open-full-info">View Info</a>
+					</div>
+				</div>
+				<div class="short-info">
+					<div class="row1">
+						<a href="#" class="title">Lorem ipsum dolor.</a>
+						<div class="rate">4.8</div>
+					</div>
+					<div class="row2">
+						<span>Lorem.</span>
+						<span>Nisi.</span>
+						<span>Minus?</span>
+					</div>
+				</div>
+				<div class="full-info" style="background-image: url(./img/film-11.jpg)">
+					<div class="row-1">
+						<div class="col1" data-js="close-full-info">
+							<i class="material-icons">&#xE145;</i>
+						</div>
+						<div class="col2">
+							<a href="#">+ Favorites</a>
+							<a href="#"><i class="material-icons">&#xE5D4;</i></a>
+						</div>
+					</div>
+					<div class="row-2">
+						<div class="col1">
+							<a href="#" class="title">Lorem ipsum dolor.</a>
+							<div class="ganre">
+								Lorem, ipsum, dolor, sit.
+							</div>
+						</div>
+						<div class="rate">4.8</div>
+					</div>
+					<div class="row-3">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+						Ad beatae commodi corporis, dolor illo minus quia quidem
+						similique suscipit ullam!
+					</div>
+					<div class="row-4">
+						<a href="#">Watch Now</a>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="columns small-12 medium-6 large-3">
+			<div class="wr">
+				<div class="photo" style="background-image: url(./img/film-12.jpg); ">
+					<div class="info">
+						<a href="#" class="btn1"><i class="material-icons">play_circle_filled</i></a>
+						<div class="note">Watch Now</div>
+						<a href="#" class="btn2" data-js="open-full-info">View Info</a>
+					</div>
+				</div>
+				<div class="short-info">
+					<div class="row1">
+						<a href="#" class="title">Lorem ipsum dolor.</a>
+						<div class="rate">4.8</div>
+					</div>
+					<div class="row2">
+						<span>Lorem.</span>
+						<span>Nisi.</span>
+						<span>Minus?</span>
+					</div>
+				</div>
+				<div class="full-info" style="background-image: url(./img/film-12.jpg)">
+					<div class="row-1">
+						<div class="col1" data-js="close-full-info">
+							<i class="material-icons">&#xE145;</i>
+						</div>
+						<div class="col2">
+							<a href="#">+ Favorites</a>
+							<a href="#"><i class="material-icons">&#xE5D4;</i></a>
+						</div>
+					</div>
+					<div class="row-2">
+						<div class="col1">
+							<a href="#" class="title">Lorem ipsum dolor.</a>
+							<div class="ganre">
+								Lorem, ipsum, dolor, sit.
+							</div>
+						</div>
+						<div class="rate">4.8</div>
+					</div>
+					<div class="row-3">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+						Ad beatae commodi corporis, dolor illo minus quia quidem
+						similique suscipit ullam!
+					</div>
+					<div class="row-4">
+						<a href="#">Watch Now</a>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+	<div class="subscribe row mt35 mb35">
+		<div class="columns">
+			<div class="content" style="background-image: url(./img/MovieCollage.jpg)">
+				<div class="row align-center">
+					<div class="columns medium-6 text-center">
+						<div class="descr">Receive information on the latest hit movies
+							straight to your inbox.</div>
+						<a href="#" class="btn mt25" >Subscribe!</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<ul class="row film-list mt25 ">
+		<li class="columns small-12 medium-6 large-3">
+			<div class="wr">
+				<div class="photo" style="background-image: url(./img/film-13.jpg); ">
+					<div class="info">
+						<a href="#" class="btn1"><i class="material-icons">play_circle_filled</i></a>
+						<div class="note">Watch Now</div>
+						<a href="#" class="btn2" data-js="open-full-info">View Info</a>
+					</div>
+				</div>
+				<div class="short-info">
+					<div class="row1">
+						<a href="#" class="title">Lorem ipsum dolor.</a>
+						<div class="rate">4.8</div>
+					</div>
+					<div class="row2">
+						<span>Lorem.</span>
+						<span>Nisi.</span>
+						<span>Minus?</span>
+					</div>
+				</div>
+				<div class="full-info" style="background-image: url(./img/film-13.jpg)">
+					<div class="row-1">
+						<div class="col1" data-js="close-full-info">
+							<i class="material-icons">&#xE145;</i>
+						</div>
+						<div class="col2">
+							<a href="#">+ Favorites</a>
+							<a href="#"><i class="material-icons">&#xE5D4;</i></a>
+						</div>
+					</div>
+					<div class="row-2">
+						<div class="col1">
+							<a href="#" class="title">Lorem ipsum dolor.</a>
+							<div class="ganre">
+								Lorem, ipsum, dolor, sit.
+							</div>
+						</div>
+						<div class="rate">4.8</div>
+					</div>
+					<div class="row-3">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+						Ad beatae commodi corporis, dolor illo minus quia quidem
+						similique suscipit ullam!
+					</div>
+					<div class="row-4">
+						<a href="#">Watch Now</a>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="columns small-12 medium-6 large-3">
+			<div class="wr">
+				<div class="photo" style="background-image: url(./img/9.jpg); ">
+					<div class="info">
+						<a href="#" class="btn1"><i class="material-icons">play_circle_filled</i></a>
+						<div class="note">Watch Now</div>
+						<a href="#" class="btn2" data-js="open-full-info">View Info</a>
+					</div>
+				</div>
+				<div class="short-info">
+					<div class="row1">
+						<a href="#" class="title">Lorem ipsum dolor.</a>
+						<div class="rate">4.8</div>
+					</div>
+					<div class="row2">
+						<span>Lorem.</span>
+						<span>Nisi.</span>
+						<span>Minus?</span>
+					</div>
+				</div>
+				<div class="full-info" style="background-image: url(./img/9.jpg)">
+					<div class="row-1">
+						<div class="col1" data-js="close-full-info">
+							<i class="material-icons">&#xE145;</i>
+						</div>
+						<div class="col2">
+							<a href="#">+ Favorites</a>
+							<a href="#"><i class="material-icons">&#xE5D4;</i></a>
+						</div>
+					</div>
+					<div class="row-2">
+						<div class="col1">
+							<a href="#" class="title">Lorem ipsum dolor.</a>
+							<div class="ganre">
+								Lorem, ipsum, dolor, sit.
+							</div>
+						</div>
+						<div class="rate">4.8</div>
+					</div>
+					<div class="row-3">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+						Ad beatae commodi corporis, dolor illo minus quia quidem
+						similique suscipit ullam!
+					</div>
+					<div class="row-4">
+						<a href="#">Watch Now</a>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="columns small-12 medium-6 large-3">
+			<div class="wr">
+				<div class="photo" style="background-image: url(./img/10.jpg); ">
+					<div class="info">
+						<a href="#" class="btn1"><i class="material-icons">play_circle_filled</i></a>
+						<div class="note">Watch Now</div>
+						<a href="#" class="btn2" data-js="open-full-info">View Info</a>
+					</div>
+				</div>
+				<div class="short-info">
+					<div class="row1">
+						<a href="#" class="title">Lorem ipsum dolor.</a>
+						<div class="rate">4.8</div>
+					</div>
+					<div class="row2">
+						<span>Lorem.</span>
+						<span>Nisi.</span>
+						<span>Minus?</span>
+					</div>
+				</div>
+				<div class="full-info" style="background-image: url(./img/10.jpg)">
+					<div class="row-1">
+						<div class="col1" data-js="close-full-info">
+							<i class="material-icons">&#xE145;</i>
+						</div>
+						<div class="col2">
+							<a href="#">+ Favorites</a>
+							<a href="#"><i class="material-icons">&#xE5D4;</i></a>
+						</div>
+					</div>
+					<div class="row-2">
+						<div class="col1">
+							<a href="#" class="title">Lorem ipsum dolor.</a>
+							<div class="ganre">
+								Lorem, ipsum, dolor, sit.
+							</div>
+						</div>
+						<div class="rate">4.8</div>
+					</div>
+					<div class="row-3">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+						Ad beatae commodi corporis, dolor illo minus quia quidem
+						similique suscipit ullam!
+					</div>
+					<div class="row-4">
+						<a href="#">Watch Now</a>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="columns small-12 medium-6 large-3">
+			<div class="wr">
+				<div class="photo" style="background-image: url(./img/creed.jpg); ">
+					<div class="info">
+						<a href="#" class="btn1"><i class="material-icons">play_circle_filled</i></a>
+						<div class="note">Watch Now</div>
+						<a href="#" class="btn2" data-js="open-full-info">View Info</a>
+					</div>
+				</div>
+				<div class="short-info">
+					<div class="row1">
+						<a href="#" class="title">Lorem ipsum dolor.</a>
+						<div class="rate">4.8</div>
+					</div>
+					<div class="row2">
+						<span>Lorem.</span>
+						<span>Nisi.</span>
+						<span>Minus?</span>
+					</div>
+				</div>
+				<div class="full-info" style="background-image: url(./img/creed.jpg)">
+					<div class="row-1">
+						<div class="col1" data-js="close-full-info">
+							<i class="material-icons">&#xE145;</i>
+						</div>
+						<div class="col2">
+							<a href="#">+ Favorites</a>
+							<a href="#"><i class="material-icons">&#xE5D4;</i></a>
+						</div>
+					</div>
+					<div class="row-2">
+						<div class="col1">
+							<a href="#" class="title">Lorem ipsum dolor.</a>
+							<div class="ganre">
+								Lorem, ipsum, dolor, sit.
+							</div>
+						</div>
+						<div class="rate">4.8</div>
+					</div>
+					<div class="row-3">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+						Ad beatae commodi corporis, dolor illo minus quia quidem
+						similique suscipit ullam!
+					</div>
+					<div class="row-4">
+						<a href="#">Watch Now</a>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
 </section>
 
+<div class="more-items mt50 mb50 text-center">
+	<div class="loader"></div>
+	<div class="text mt10">loading</div>
+</div>
 
+<footer>
+	<div class="row align-justify">
+		<div class="columns small-12 medium-4 small-order-1 medium-order-1  text-center  medium-text-left more-links">
+			<a href="#">About </a>
+			<a href="#">Terms of Service </a>
+			<a href="#"> Contact</a>
+		</div>
+		<div class="columns small-12 medium-4 small-order-3 medium-order-2 center text-center">
+			<a href="#" class="logo">
+				MOVIE <span class="light">rise</span>
+			</a>
+
+			<div class="copy mt35">Copyright &copy; 2017 <b>MOVIE</b><span class="light">RISE.</span> All Rights Reserved.</div>
+		</div>
+		<div class="columns small-12 medium-4 small-order-2 medium-order-3 text-center medium-text-right text-right socials">
+			<a href="#" class="fi-social-facebook"></a>
+			<a href="#" class="fi-social-twitter"></a>
+			<a href="#" class="fi-social-path"></a>
+			<a href="#" class="fi-social-instagram"></a>
+			<a href="#" class="fi-social-youtube"></a>
+		</div>
+	</div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+<script type="text/javascript" src="./script/app.js"></script>
 </body>
 </html>
 

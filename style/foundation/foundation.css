@@ -1187,16 +1187,16 @@ select {
   -ms-flex-flow: row wrap;
       flex-flow: row wrap; }
   .row .row {
-    margin-right: -20rem;
-    margin-left: -20rem; }
+    margin-right: -10rem;
+    margin-left: -10rem; }
     @media print, screen and (min-width: 40em) {
       .row .row {
-        margin-right: -20rem;
-        margin-left: -20rem; } }
+        margin-right: -10rem;
+        margin-left: -10rem; } }
     @media print, screen and (min-width: 64em) {
       .row .row {
-        margin-right: -20rem;
-        margin-left: -20rem; } }
+        margin-right: -10rem;
+        margin-left: -10rem; } }
     .row .row.collapse {
       margin-right: 0;
       margin-left: 0; }
@@ -1219,8 +1219,8 @@ select {
 .column, .columns {
   -ms-flex: 1 1 0px;
       flex: 1 1 0px;
-  padding-right: 20rem;
-  padding-left: 20rem;
+  padding-right: 10rem;
+  padding-left: 10rem;
   min-width: 0; }
 
 .column.row.row, .row.row.columns {
@@ -1398,8 +1398,8 @@ select {
   padding-left: 0; }
 
 .small-uncollapse > .column, .small-uncollapse > .columns {
-  padding-right: 20rem;
-  padding-left: 20rem; }
+  padding-right: 10rem;
+  padding-left: 10rem; }
 
 @media print, screen and (min-width: 40em) {
   .medium-1 {
@@ -1549,8 +1549,8 @@ select {
     padding-right: 0;
     padding-left: 0; }
   .medium-uncollapse > .column, .medium-uncollapse > .columns {
-    padding-right: 20rem;
-    padding-left: 20rem; } }
+    padding-right: 10rem;
+    padding-left: 10rem; } }
 
 @media print, screen and (min-width: 64em) {
   .large-1 {
@@ -1700,8 +1700,8 @@ select {
     padding-right: 0;
     padding-left: 0; }
   .large-uncollapse > .column, .large-uncollapse > .columns {
-    padding-right: 20rem;
-    padding-left: 20rem; } }
+    padding-right: 10rem;
+    padding-left: 10rem; } }
 
 .shrink {
   -ms-flex: 0 0 auto;
